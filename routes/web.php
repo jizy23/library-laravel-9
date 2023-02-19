@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
+
+
+// rotte per i libri
+Route::get('/book/create', [BookController::class, 'createBook'])->name('createBook');
+Route::post('/book/store', [BookController::class, 'storeBook'])->name('storeBook');
+Route::get('/book/index', [BookController::class, 'indexBook'])->name('indexBook');
