@@ -15,6 +15,8 @@ class BookController extends Controller
 
         // dd($request->all());
 
+        //!MASS ASSIGNAMENT
+        
         $book = Book::create(
             [
                 'title'=>$request->input('title'),
@@ -28,9 +30,16 @@ class BookController extends Controller
 
     }
 
-    public function indexBook(){
+    
+    public function indexBook(Book $book){
         $books = Book::all();
         return view('book.indexBook', compact('books'));
+    }
+
+
+    public function detailBook(Book $book){
+        
+        return view('book.detailBook', compact('book'));
     }
 
 

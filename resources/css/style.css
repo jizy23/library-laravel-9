@@ -1,10 +1,35 @@
 
-body{
-    background-color: bisque;
+:root{
+    --primary-color: #f9eae1;
+    --secondary-color: #cc8b86;
+    --tertiary-color:  #422800;
+}
+
+.colorNeutro{
+    color: var(--primary-color);
+}
+
+.colorLightBrown{
+    color: var(--tertiary-color);
 }
 
 
+body{
+    background-color: var(--primary-color);
+}
+
+
+
+/* nabbar */
 nav{
-    background-color: rgba(149, 0, 255, 0.76);
+    background-color: var(--tertiary-color);
     font-weight: bold;
+}
+
+
+/* cards */
+.cardBook{
+    --bs-card-border-width: 2px;
+    --bs-card-border-color: var(--tertiary-color);
+    --bs-card-border-radius: 0rem;
 }

@@ -22,3 +22,7 @@ Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 Route::get('/book/create', [BookController::class, 'createBook'])->name('createBook');
 Route::post('/book/store', [BookController::class, 'storeBook'])->name('storeBook');
 Route::get('/book/index', [BookController::class, 'indexBook'])->name('indexBook');
+
+
+// rotta parametrica per il singolo libro
+Route::get('/book/{book}', [BookController::class, 'detailBook'])->name('detailBook');
