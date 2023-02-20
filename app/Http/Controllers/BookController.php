@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BookRequest;
 use App\Models\Book;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,7 @@ class BookController extends Controller
         return view('book.createBook');
     }
 
-    public function storeBook(Request $request){
+    public function storeBook(BookRequest $request){
 
         // dd($request->all());
 
@@ -38,7 +39,6 @@ class BookController extends Controller
 
 
     public function detailBook(Book $book){
-        
         return view('book.detailBook', compact('book'));
     }
 

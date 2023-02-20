@@ -2,7 +2,7 @@
 
     <div class="container vh-100">
 
-        <h2>Dettaglio libro</h2>
+        <h2 class="text-uppercase colorLightBrown text-center m-4">Dettaglio libro</h2>
     
         <div class="card m-5" style="width: 18rem;">
             <div class="card-body">

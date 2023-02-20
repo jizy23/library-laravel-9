@@ -15,7 +15,9 @@
                 <div class="card-body text-center">
                   <h6 class="card-title">Titolo: {{$book->title}}</h6>
                   <p class="card-subtitle mb-2">Autore: {{$book->author}}</p>
-                  <button href="{{route('welcome')}}" class="button-74 m-3" role="button"><i class="fa-brands fa-readme"></i></button>
+                  <a href="{{route('detailBook', compact('book'))}}">
+                    <button href="{{route('detailBook', compact('book'))}}" class="button-74 m-3" role="button"><i class="fa-brands fa-readme"></i></button>
+                  </a>
                 </div>
             </div>
             @endforeach
