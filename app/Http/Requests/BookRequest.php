@@ -26,6 +26,7 @@ class BookRequest extends FormRequest
             'author'=>'required',
             'year'=>'required | integer',
             'trama'=>'required',
+            // 'img'=>'required | image',
 
         ];
     }
@@ -38,6 +39,7 @@ class BookRequest extends FormRequest
             'year.required'=>"È obbligatorio inserire l'anno di pubblicazione.",
             'year.integer'=>"È obbligatorio inserire un numero intero.",
             'trama.required'=>'È obbligatorio inserire la trama.',
+            // 'img.required'=>'È obbligatorio inserire la copertina.',
         ];
     }
 }

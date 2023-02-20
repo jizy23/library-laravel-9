@@ -12,6 +12,7 @@
             {{-- card --}}
             @foreach ($books as $book)        
             <div class="card m-4 cardBook" style="width:18rem; height:12rem;">
+                {{-- <img src="{{Storage::url($book->img)}}" class="img-fluid" alt="" srcset=""> --}}
                 <div class="card-body text-center">
                   <h6 class="card-title">Titolo: {{$book->title}}</h6>
                   <p class="card-subtitle mb-2">Autore: {{$book->author}}</p>

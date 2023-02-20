@@ -12,23 +12,39 @@ class BookController extends Controller
         return view('book.createBook');
     }
 
+
     public function storeBook(BookRequest $request){
 
         // dd($request->all());
 
         //!MASS ASSIGNAMENT
+        if($request->img == null){
+
+            $book = Book::create(
+                [
+                    'title'=>$request->input('title'),
+                    'author'=>$request->input('author'),
+                    'year'=>$request->input('year'),
+                    'trama'=>$request->input('trama'),
+                    'img'=>'public/img/no_img_available.jpg',
+                ]
+            );
+
+        }else{
+
+            $book = Book::create(
+                [
+                    'title'=>$request->input('title'),
+                    'author'=>$request->input('author'),
+                    'year'=>$request->input('year'),
+                    'trama'=>$request->input('trama'),
+                    'img'=>$request->file('img')->store('public/img'),
+                ]
+            );
+
+        }
         
-        $book = Book::create(
-            [
-                'title'=>$request->input('title'),
-                'author'=>$request->input('author'),
-                'year'=>$request->input('year'),
-                'trama'=>$request->input('trama'),
-            ]
-        );
-
         return redirect(route('indexBook'));
-
     }
 
     
