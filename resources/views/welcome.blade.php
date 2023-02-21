@@ -4,7 +4,12 @@
 
     <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
         
-        <h1 class="text-uppercase colorLightBrown">Welcome home</h1>
+        
+        @guest
+            <h1 class="text-uppercase colorLightBrown">Welcome home</h1>
+        @else
+            <h1>Libreria di {{Auth::user()->name}}</h1>
+        @endguest
 
     </div>
 

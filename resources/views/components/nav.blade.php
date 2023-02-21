@@ -7,10 +7,34 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav mx-auto text-uppercase">
+
+        <div class="navbar-nav me-auto text-uppercase">
           <a class="nav-link colorNeutro" aria-current="page" href="{{route('welcome')}}">Home</a>
           <a class="nav-link colorNeutro" href="{{route('indexBook')}}">Libreria</a>
           <a class="nav-link colorNeutro" href="{{route('createBook')}}">Aggiungi un libro</a>
+        </div>
+        
+
+        
+        
+        <div class="navbar-nav ms-auto text-uppercase">
+          
+          @guest
+          <a class="nav-link colorNeutro" href="{{route('login')}}">Accedi</a>
+          <a class="nav-link colorNeutro" href="{{route('register')}}">Registrazione</a>
+          
+          @else
+          {{-- {{Auth::user()->name}} --}}
+          <a class="nav-link colorNeutro" href="{{route('logout')}}"
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">logout</a>
+
+            <form id="logout-form" action="{{route('logout')}}" method="POST" class="d-none">
+                @csrf
+            </form>
+
+          @endguest
+
         </div>
       </div>
     </div>

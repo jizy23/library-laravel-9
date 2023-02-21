@@ -2,7 +2,7 @@
   
   <x-slot name="title">createBook</x-slot>
   
-  <div class="container vh-100">
+  <div class="container vh-100 ps-5 pe-5">
     
     <h2 class="colorLightBrown text-center m-4">Aggiungi un libro</h2>
     
@@ -36,7 +36,7 @@
       </div>
       
       <div class="container text-center">
-        <button class="button-74 m-3" role="button" type="submit">Invio</button>
+        <button class="button-74 m-3" role="button" type="submit">Invia</button>
       </div>
       
     </form>

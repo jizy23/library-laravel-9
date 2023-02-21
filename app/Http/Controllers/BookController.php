@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except('indexBook', 'detailBook');
+    }
+
+
+
     public function createBook(){
         return view('book.createBook');
     }

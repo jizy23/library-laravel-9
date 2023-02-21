@@ -10,6 +10,10 @@
 }
 
 .colorLightBrown{
+    color: var(--seconday-color);
+}
+
+.colorDarkBrown{
     color: var(--tertiary-color);
 }
 
@@ -21,7 +25,7 @@ body{
 
 
 /* nabbar */
-nav{
+.navbar{
     background-color: var(--tertiary-color);
     font-weight: bold;
 }
@@ -32,4 +36,16 @@ nav{
     --bs-card-border-width: 2px;
     --bs-card-border-color: var(--tertiary-color);
     --bs-card-border-radius: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+
+.boxDetailBook{
+    border: 2px solid var(--tertiary-color);
+    padding: 50px;
+    margin: 10px;
+    /* min-height: 100%; */
 }
