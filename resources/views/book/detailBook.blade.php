@@ -20,11 +20,21 @@
 
         </div>
 
-        <div class="container text-center">
+        <div class="container text-center d-flex justify-content-center">
+            {{-- modifica bottone --}}
             <a href="{{route('editBook', compact('book'))}}">
                 <button  class="button-74 m-3" role="button" type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
             </a>
-          </div>
+
+            {{-- bottone elimina --}}
+            <form action="{{route('deleteBook', compact('book'))}}" method="POST">
+                @csrf
+                @method('delete')
+
+                <button  class="button-74 m-3" role="button" type="submit"><i class="fa-solid fa-trash"></i></button>
+            </form>
+
+        </div>
         
 
     </div>

@@ -44,7 +44,6 @@ body{
     justify-content: space-evenly;
 }
 
-
 .boxDetailBook{
     border: 2px solid var(--tertiary-color);
     padding: 50px;

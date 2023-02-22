@@ -17,12 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 
-
 // rotte per i libri
 Route::get('/book/create', [BookController::class, 'createBook'])->name('createBook');
 Route::post('/book/store', [BookController::class, 'storeBook'])->name('storeBook');
 Route::get('/book/index', [BookController::class, 'indexBook'])->name('indexBook');
-
 
 // rotta parametrica per il dettaglio del singolo libro
 Route::get('/book/{book}', [BookController::class, 'detailBook'])->name('detailBook');
@@ -30,5 +28,9 @@ Route::get('/book/{book}', [BookController::class, 'detailBook'])->name('detailB
 // rotta parametrica per la modifica del singolo un libro
 Route::get('/book/edit/{book}', [BookController::class, 'editBook'])->name('editBook');
 
+// rotta parametrica per la modifica del singolo un libro
 Route::put('/book/update/{book}', [BookController::class, 'updateBook'])->name('updateBook');
+
+// rotta parametrica per eliminare il singolo un libro
+Route::delete('/book/delete/{book}', [BookController::class, 'deleteBook'])->name('deleteBook');
 
