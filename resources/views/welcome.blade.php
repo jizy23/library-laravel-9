@@ -4,7 +4,6 @@
 
     <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
         
-        
         @guest
             <h1 class="text-uppercase colorLightBrown">Welcome home</h1>
         @else

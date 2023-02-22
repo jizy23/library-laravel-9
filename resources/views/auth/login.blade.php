@@ -4,7 +4,7 @@
   
       <div class="container vh-100">
 
-           <h2 class="colorDarkBrown text-center m-4">Accedi</h2>
+           <h2 class="colorTertiary text-center m-4">Accedi</h2>
   
           <form method="POST" action="{{route('login')}}">
               @csrf

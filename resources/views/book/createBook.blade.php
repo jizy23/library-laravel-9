@@ -4,7 +4,7 @@
   
   <div class="container vh-100 ps-5 pe-5">
     
-    <h2 class="colorLightBrown text-center m-4">Aggiungi un libro</h2>
+    <h2 class="colorSecondary text-center m-4">Aggiungi un libro</h2>
     
     <form action="{{route('storeBook')}}" method="POST" enctype="multipart/form-data">
       @csrf

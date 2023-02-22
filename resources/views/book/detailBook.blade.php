@@ -2,7 +2,7 @@
 
     <div class="container vh-100">
 
-        <h2 class="text-uppercase colorDarkBrown text-center m-4">Dettaglio libro: {{$book->title}}</h2>
+        <h2 class="text-uppercase colorTertiary text-center m-4">Dettaglio libro: {{$book->title}}</h2>
     
 
         <div class="row container-flex boxDetailBook d-flex justify-content-center align-items-start">
@@ -19,6 +19,12 @@
             </div>
 
         </div>
+
+        <div class="container text-center">
+            <a href="{{route('editBook', compact('book'))}}">
+                <button  class="button-74 m-3" role="button" type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
+            </a>
+          </div>
         
 
     </div>

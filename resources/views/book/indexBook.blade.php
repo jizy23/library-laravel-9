@@ -5,7 +5,7 @@
 
     <div class="container vh-100">
 
-        <h2 class="text-uppercase colorDarkBrown text-center m-4">Libreria</h2>
+        <h2 class="text-uppercase colorTertiary text-center m-4">Libreria</h2>
 
         <div class="row container d-flex justify-content-center">
 

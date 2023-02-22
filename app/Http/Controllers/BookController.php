@@ -15,7 +15,6 @@ class BookController extends Controller
     }
 
 
-
     public function createBook(){
         return view('book.createBook');
     }
@@ -67,4 +66,42 @@ class BookController extends Controller
     }
 
 
+    public function editBook(Book $book){
+        return view('book.editBook', compact('book'));
+    }
+
+    
+    public function updateBook(Book $book, Request $request){
+
+        $book = update(
+            [
+                'title'=>$request->input('title'),
+                'author'=>$request->input('author'),
+                'year'=>$request->input('year'),
+                'trama'=>$request->input('trama'),
+                'img'=>$request->file('img')->store('public/img'),
+            ]
+        );
+
+        return redirect(route('indexBook'));
+    }
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

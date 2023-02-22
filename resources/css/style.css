@@ -1,3 +1,11 @@
+*{
+    font-family: 'Roboto Slab', serif;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
 
 :root{
     --primary-color: #f9eae1;
@@ -5,26 +13,20 @@
     --tertiary-color:  #422800;
 }
 
-.colorNeutro{
+.colorPrimary{
     color: var(--primary-color);
 }
 
-.colorLightBrown{
+.colorSecondary{
     color: var(--seconday-color);
 }
 
-.colorDarkBrown{
+.colorTertiary{
     color: var(--tertiary-color);
 }
 
 
-body{
-    background-color: var(--primary-color);
-}
-
-
-
-/* nabbar */
+/* navbar */
 .navbar{
     background-color: var(--tertiary-color);
     font-weight: bold;
@@ -47,5 +49,4 @@ body{
     border: 2px solid var(--tertiary-color);
     padding: 50px;
     margin: 10px;
-    /* min-height: 100%; */
 }

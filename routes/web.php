@@ -24,5 +24,11 @@ Route::post('/book/store', [BookController::class, 'storeBook'])->name('storeBoo
 Route::get('/book/index', [BookController::class, 'indexBook'])->name('indexBook');
 
 
-// rotta parametrica per il singolo libro
+// rotta parametrica per il dettaglio del singolo libro
 Route::get('/book/{book}', [BookController::class, 'detailBook'])->name('detailBook');
+
+// rotta parametrica per la modifica del singolo un libro
+Route::get('/book/edit/{book}', [BookController::class, 'editBook'])->name('editBook');
+
+Route::put('/book/update/{book}', [BookController::class, 'updateBook'])->name('updateBook');
+
